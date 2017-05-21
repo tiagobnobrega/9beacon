@@ -1,0 +1,21 @@
+server:
+  port: ${PORT:8761}
+eureka:
+# EUREKA WITH ADMIN
+# instance:
+#    hostname: ${EUREKA_HOSTNAME:localhost}
+#  client:
+#    registerWithEureka: false
+#    fetchRegistry: false
+
+# EUREKA ONLY
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    numberRegistrySyncRetries: 0
+    server:
+      waitTimeInMsWhenSyncEmpty: 0
+spring:
+  boot:
+    admin:
+      context-path: /admin
